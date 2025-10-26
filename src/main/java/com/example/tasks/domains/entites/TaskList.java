@@ -22,7 +22,7 @@ public class TaskList {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "id",cascade = {CascadeType.REMOVE,CascadeType.PERSIST})
+    @OneToMany(mappedBy = "taskList",cascade = {CascadeType.REMOVE,CascadeType.PERSIST},orphanRemoval = true)
     private List<Task> tasks;
 
     @Column(nullable = false)

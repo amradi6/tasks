@@ -3,6 +3,7 @@ package com.example.tasks.services.impl;
 import com.example.tasks.domains.entites.TaskList;
 import com.example.tasks.repositorie.TaskListRepository;
 import com.example.tasks.services.TaskListService;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -66,6 +67,7 @@ public class TaskListServiceImpl implements TaskListService {
     }
 
     @Override
+    @Transactional
     public void deleteTaskList(UUID taskListId) {
         taskListRepository.deleteById(taskListId);
     }

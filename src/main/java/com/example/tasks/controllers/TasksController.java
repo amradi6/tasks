@@ -1,7 +1,6 @@
 package com.example.tasks.controllers;
 
 import com.example.tasks.domains.dto.TaskDto;
-import com.example.tasks.domains.dto.TaskListDto;
 import com.example.tasks.domains.entites.Task;
 import com.example.tasks.mappers.TaskMapper;
 import com.example.tasks.services.TaskService;
